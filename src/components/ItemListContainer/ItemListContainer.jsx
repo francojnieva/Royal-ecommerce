@@ -2,9 +2,9 @@ import React from 'react'
 
 const ItemListContainer = ({ greeting }) => {
 	return (
-		<div>
-			<h1>{greeting}</h1>
-		</div>
+		<section>
+			<h2 className='text-center font-bold text-3xl'>{greeting}</h2>
+		</section>
 	)
 }
 
