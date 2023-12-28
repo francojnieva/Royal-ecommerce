@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import CartWidget from '../CartWidget/CartWidget'
 import MenuMobile from '../MenuMobile/MenuMobile'
 import { RiMenuFill } from "react-icons/ri";
+import { IoMdClose } from "react-icons/io";
 
 const NavBar = () => {
+	const [showMenu, setShowMenu] = useState(false)
+
+	const toggleMenu = () => {
+		setShowMenu(!showMenu)
+	}
+
 	return (
 		<header>
-			<nav className='bg-[#131313] text-[#BD926C] flex justify-between items-center fixed top-0 w-full p-3 md:px-7 lg:px-12 z-40'>
+			<nav className='bg-[#080808] text-[#BD926C] flex justify-between items-center fixed top-0 w-full p-3 md:px-7 lg:px-12 z-40'>
 				<h1 className='text-3xl font-bold tracking-wide'>Royal</h1>
 				<div className='hidden lg:block'>
 					<ul className=' flex items-center space-x-8 font-bold'>
@@ -18,10 +25,12 @@ const NavBar = () => {
 				</div>
 				<div className='flex items-center space-x-4'>
 					<CartWidget></CartWidget>
-					<RiMenuFill className='text-2xl lg:hidden text-[#f5f5f5]'></RiMenuFill>
+					<button onClick={toggleMenu} className='text-3xl lg:hidden text-[#f5f5f5]'>
+						{showMenu ? <IoMdClose></IoMdClose> : <RiMenuFill></RiMenuFill>}
+					</button>
 				</div>
 			</nav>
-			<MenuMobile></MenuMobile>
+			<MenuMobile showMenu={showMenu}></MenuMobile>
 		</header>
 	)
 }
