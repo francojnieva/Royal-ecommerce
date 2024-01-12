@@ -3,6 +3,7 @@ import CartWidget from '../CartWidget/CartWidget'
 import MenuMobile from '../MenuMobile/MenuMobile'
 import { RiMenuFill } from "react-icons/ri";
 import { IoMdClose } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 	const [showMenu, setShowMenu] = useState(false)
@@ -14,13 +15,14 @@ const NavBar = () => {
 	return (
 		<header>
 			<nav className='bg-[#080808] text-[#BD926C] flex justify-between items-center fixed top-0 w-full p-3 md:px-7 lg:px-12 z-40'>
-				<h1 className='text-3xl font-bold tracking-wide'>Royal</h1>
+				<Link to='/' className='text-3xl font-bold tracking-wide'>Royal</Link>
 				<div className='hidden lg:block'>
 					<ul className=' flex items-center space-x-8 font-bold'>
-						<li><a href="#" className='hover:text-[#ecbb8f] transition-all'>INICIO</a></li>
-						<li><a href="#" className='hover:text-[#ecbb8f] transition-all'>HOMBRES</a></li>
-						<li><a href="#" className='hover:text-[#ecbb8f] transition-all'>MUJERES</a></li>
-						<li><a href="#" className='hover:text-[#ecbb8f] transition-all'>CONTACTO</a></li>
+						<li><Link to='/' className='hover:text-[#ecbb8f] transition-all'>INICIO</Link></li>
+						<li><Link to='' className='hover:text-[#ecbb8f] transition-all'>HOMBRES</Link></li>
+						<li><Link to='' className='hover:text-[#ecbb8f] transition-all'>MUJERES</Link></li>
+						<li><Link to='' className='hover:text-[#ecbb8f] transition-all'>VINTAGE</Link></li>
+						<li><Link to='contact' className='hover:text-[#ecbb8f] transition-all'>CONTACTO</Link></li>
 					</ul>
 				</div>
 				<div className='flex items-center space-x-4'>

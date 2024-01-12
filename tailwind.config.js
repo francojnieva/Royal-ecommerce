@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'inner': 'inset 0 0 32px 15px rgba(0, 0, 0, 1)',
+      },
+    },
   },
   plugins: [],
 }
