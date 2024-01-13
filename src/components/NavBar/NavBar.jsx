@@ -14,7 +14,7 @@ const NavBar = () => {
 
 	return (
 		<header>
-			<nav className='bg-[#080808] text-[#BD926C] flex justify-between items-center fixed top-0 w-full p-3 md:px-7 lg:px-12 z-40'>
+			<nav className='bg-[#141414] text-[#BD926C] flex justify-between items-center fixed top-0 w-full p-3 md:px-7 lg:px-12 z-40'>
 				<Link to='/' className='text-3xl font-bold tracking-wide'>Royal</Link>
 				<div className='hidden lg:block'>
 					<ul className=' flex items-center space-x-8 font-bold'>
@@ -32,7 +32,7 @@ const NavBar = () => {
 					</button>
 				</div>
 			</nav>
-			<MenuMobile showMenu={showMenu}></MenuMobile>
+			<MenuMobile showMenu={showMenu} setShowMenu={setShowMenu}></MenuMobile>
 		</header>
 	)
 }
