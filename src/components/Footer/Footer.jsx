@@ -10,9 +10,9 @@ const Footer = () => {
 			<div className='flex flex-col space-y-6 mb-5 text-[#babfc9]'>
 				<h4 className=' text-[#6C727C] font-bold'>PÁGINA</h4>
 				<Link to='/' className='hover:underline transition-all'>Inicio</Link>
-				<Link to='' className='hover:underline transition-all'>Hombres</Link>
-				<Link to='' className='hover:underline transition-all'>Mujeres</Link>
-				<Link to='' className='hover:underline transition-all'>Vintage</Link>
+				<Link to='category/hombres' className='hover:underline transition-all'>Hombres</Link>
+				<Link to='category/mujeres' className='hover:underline transition-all'>Mujeres</Link>
+				<Link to='category/vintage' className='hover:underline transition-all'>Vintage</Link>
 				<Link to='contact' className='hover:underline transition-all'>Contacto</Link>
 			</div>
 			<div className='flex flex-col space-y-6'>

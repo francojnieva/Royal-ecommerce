@@ -9,9 +9,9 @@ const MenuMobile = (props) => {
 			<nav>
 				<ul className='mt-3 space-y-7 font-bold text-md text-[#BD926C]'>
 					<li><Link to='/'>INICIO</Link></li>
-					<li><Link to=''>HOMBRES</Link></li>
-					<li><Link to=''>MUJERES</Link></li>
-					<li><Link to=''>VINTAGE</Link></li>
+					<li><Link to='category/hombres'>HOMBRES</Link></li>
+					<li><Link to='category/mujeres'>MUJERES</Link></li>
+					<li><Link to='category/vintage'>VINTAGE</Link></li>
 					<li><Link to='/contact'>CONTACTO</Link></li>
 				</ul>
 			</nav>
