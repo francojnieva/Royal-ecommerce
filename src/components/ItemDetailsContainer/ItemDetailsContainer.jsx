@@ -9,12 +9,19 @@ const ItemDetailsContainer = () => {
 
     const [products, setProducts] = useState({})
 
+    const [skeleton, setSkeleton] = useState(true)
+
     useEffect(() => {
         getProductsById(id).then(res => setProducts(res))
+            .finally(() => {
+                setSkeleton(false)
+            })
     }, [id])
 
     return (
-        <ItemDetails products={products} />
+        <section className=' min-h-screen py-20 px-3 text-white flex flex-col justify-around items-center space-y-5 md:px-7 md:flex-row lg:px-12'>
+            <ItemDetails products={products} skeleton={skeleton}   />
+        </section>
     )
 }
 

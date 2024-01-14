@@ -24,7 +24,7 @@ const Footer = () => {
 				</div>
 			</div>
 			<div className='pt-4 text-[#babfc9]'>
-				<small>Copyright © 2024 - All right reserved</small>
+				<small>Copyright © 2024 - All right reserved <br />Desarrollado por Franco Javier Nieva</small>
 			</div>
 		</footer>
 	)

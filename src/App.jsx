@@ -5,6 +5,7 @@ import FormContact from './pages/FormContact/FormContact'
 import { Routes, Route } from 'react-router-dom'
 import ItemList from './pages/ItemList/ItemList'
 import ItemDetailsContainer from './components/ItemDetailsContainer/ItemDetailsContainer'
+import NotFound from './pages/NotFound/NotFound'
 
 
 
@@ -18,6 +19,7 @@ function App() {
 				<Route path='/contact' element={<FormContact />}></Route>
 				<Route path='/category/:category' element={<ItemList />}></Route>
 				<Route path="producto/:id" element={<ItemDetailsContainer/>}/>
+				<Route path="*" element={<NotFound/>}/>
 			</Routes>
 			<Footer></Footer>
 		</>
