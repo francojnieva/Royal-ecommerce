@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import getProductsByCategory from '../../utils/getProductsByCategory.js'
+import Button from '../../components/Button/Button.jsx'
 
 const ItemList = () => {
 
@@ -33,9 +34,7 @@ const ItemList = () => {
                                         <small className='text-[#7a7a7a]'>Precio:</small>
                                         <p className='text-[#ecbb8f] text-xl'>US ${price}</p>
                                     </div>
-                                    <button className=' py-1 px-3 bg-[#1d1d1d] rounded-md'>
-                                        Ver detalles
-                                    </button>
+                                    <Button label={'Ver detalles'}></Button>
                                 </Link>
                             )
                         })

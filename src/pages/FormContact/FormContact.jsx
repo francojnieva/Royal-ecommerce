@@ -24,9 +24,9 @@ const FormContact = () => {
 				<img src={banner} alt="reloj en tonos dorados con negro" className=' w-64 h-[38rem] object-cover' />
 			</div>
 			<form method='post' className=' w-[95%] text-[#d3d3d3] md:w-[70%] lg:w-[40%]' onSubmit={handleSubmit(onSubmit)}>
-				<h2 className=' text-2xl text-center pb-3 text-[#ecbb8f] md:text-3xl'>Contacto</h2>
-				<div className='flex flex-col space-y-2 mb-6 text-sm lg:pl-4'>
-					<label htmlFor="name" className=' font-bold'>Nombre:</label>
+				<h2 className=' text-3xl text-center pb-3 text-[#ecbb8f]'>Contacto</h2>
+				<div className='flex flex-col space-y-2 mb-6  lg:pl-4'>
+					<label htmlFor="name">Nombre:</label>
 					<input
 						className='py-2 outline-none bg-[#020202] border border-t-[#020202] border-x-[#020202]  border-b-[#ecbb8f]'
 						type="text"
@@ -42,8 +42,8 @@ const FormContact = () => {
 					/>
 					<span className='text-xs text-red-600 pb-3 xl:text-sm'>{errors.name && errors.name.message}</span>
 				</div>
-				<div className=' flex flex-col space-y-2 mb-6 text-sm lg:pl-4' >
-					<label htmlFor="email" className='font-bold'>Correo electrónico:</label>
+				<div className=' flex flex-col space-y-2 mb-6 lg:pl-4' >
+					<label htmlFor="email">Correo electrónico:</label>
 					<input
 						className='py-2 outline-none bg-[#020202] border border-t-[#020202] border-x-[#020202]  border-b-[#ecbb8f]'
 						type="email"
@@ -61,8 +61,8 @@ const FormContact = () => {
 					/>
 					<span className='text-xs text-red-600 pb-3 xl:text-sm'>{errors.email && errors.email.message}</span>
 				</div>
-				<div className=' flex flex-col space-y-2 mb-6 text-sm lg:pl-4'>
-					<label htmlFor="subject" className='font-bold'>Asunto:</label>
+				<div className=' flex flex-col space-y-2 mb-6 lg:pl-4'>
+					<label htmlFor="subject">Asunto:</label>
 					<input
 						className='py-2 outline-none bg-[#020202] border border-t-[#020202] border-x-[#020202]  border-b-[#ecbb8f]'
 						type="text"
@@ -78,8 +78,8 @@ const FormContact = () => {
 					/>
 					<span className='text-xs text-red-600 pb-3 xl:text-sm'>{errors.subject && errors.subject.message}</span>
 				</div>
-				<div className=' flex flex-col space-y-2 mb-6 text-sm lg:pl-4'>
-					<label htmlFor="message" className='font-bold'>Mensaje:</label>
+				<div className=' flex flex-col space-y-2 mb-6  lg:pl-4'>
+					<label htmlFor="message">Mensaje:</label>
 					<textarea
 						className='py-2 outline-none bg-[#020202] border border-t-[#020202] border-x-[#020202] resize-none border-b-[#ecbb8f]'
 						autoComplete='off'
@@ -100,7 +100,7 @@ const FormContact = () => {
 						<p>¡Gracias {submittedName} por contactarnos!</p>
 					</div>
 				)}
-				<button type="submit" className='bg-[#222222] text-[#FFF] text-sm font-bold py-2 px-4 rounded-md lg:ml-4'>Enviar</button>
+				<button type="submit" className='bg-[#222222] text-[#FFF] text-sm  py-2 px-4 rounded-md lg:ml-4'>Enviar</button>
 			</form>
 		</section>
 	)

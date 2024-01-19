@@ -3,6 +3,7 @@ import { IoMdAdd } from "react-icons/io";
 import { RiSubtractFill } from "react-icons/ri";
 import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
+import Button from '../../components/Button/Button';
 
 const ItemDetails = ({ products, skeleton }) => {
 
@@ -57,18 +58,18 @@ const ItemDetails = ({ products, skeleton }) => {
                                     isInCart(id)
                                         ?
                                         <>
-                                        <p className=' text-green-500 italic'>Producto agregado al carrito</p>
-                                        <Link to='/cart'><button className='mt-4 p-2 rounded-md bg-[#ecbb8f] text-black'> Ver carrito</button></Link>
+                                            <p className=' text-green-500 italic pb-3'>Producto agregado al carrito</p>
+                                            <Link to='/cart'><Button label={'Ver carrito'}></Button></Link>
                                         </>
                                         :
                                         <>
                                             <p className='text-[#ecbb8f]'>Cantidad:</p>
-                                            <div className='flex items-center space-x-4'>
+                                            <div className='flex items-center space-x-4 pb-3'>
                                                 <button onClick={subtract} className='py-1 px-3 rounded-md text-white bg-[#444444]' disabled={counter === 1} ><RiSubtractFill /></button>
                                                 <p>{counter}</p>
                                                 <button onClick={add} className=' py-1 px-3 rounded-md text-white bg-[#444444]' disabled={counter >= stock}><IoMdAdd /></button>
                                             </div>
-                                            <button onClick={handleaddToCart} className='mt-4 p-2 rounded-md bg-[#ecbb8f] text-black'>Agregar al carrito</button>
+                                            <Button callback={handleaddToCart} label={'Agregar al carrito'}></Button>
                                         </>
                                 }
                             </div>
