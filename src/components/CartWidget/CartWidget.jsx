@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FaCartShopping } from "react-icons/fa6";
+import { CartContext } from '../../context/CartContext';
 
 const CartWidget = () => {
+
+	const { quantityCart } = useContext(CartContext)
+
 	return (
 		<button className='flex items-center text-lg text-[#f5f5f5]'>
-			<FaCartShopping />(0)
+			<FaCartShopping />
+			<p>({ quantityCart() })</p>
 		</button>
 	)
 }
