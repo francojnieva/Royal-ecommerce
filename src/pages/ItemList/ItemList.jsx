@@ -26,13 +26,13 @@ const ItemList = () => {
                     {
                         products.map(({ name, id, image, price, model, category }) => {
                             return (
-                                <Link to={`/producto/${id}`} key={id} className='relative p-3 space-y-4 bg-[#0a0a0a] rounded-md border border-gray-800 hover:border hover:border-[#ecbb8f] transition-all w-[10rem] md:w-[12rem] lg:w-[15rem]'>
-                                    <h5 className=' absolute top-2 text-sm '>{name}</h5>
+                                <Link to={`/producto/${id}`} key={id} className='p-3 space-y-4 bg-[#0a0a0a] rounded-md border border-[#31302f] hover:border hover:border-[#ecbb8f] transition-all w-[10rem] md:w-[12rem] lg:w-[15rem]'>
+                                    <h5 className=' text-sm'>{name}</h5>
                                     <img src={image} className={`m-auto w-[10rem] ${category === 'hombres' ? 'w-[5.4rem]' : ''}`} alt={name} />
-                                    <div>
+                                    <div className=' text-xl'>
                                         <h6>{model}</h6>
                                         <small className='text-[#7a7a7a]'>Precio:</small>
-                                        <p className='text-[#ecbb8f] text-xl'>US ${price}</p>
+                                        <p className='text-[#ecbb8f]'>$ {price}</p>
                                     </div>
                                     <Button label={'Ver detalles'}></Button>
                                 </Link>

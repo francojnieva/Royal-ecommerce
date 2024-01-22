@@ -22,7 +22,7 @@ const Cart = () => {
                     <>
                         {
                             cart.map(({ id, name, model, image, category, quantity }) => (
-                                <article key={id} className='w-full flex items-center justify-between p-3 border border-x-transparent border-t-transparent border-b-[#ecbb8f] lg:w-[70%]'>
+                                <article key={id} className='w-full flex items-center justify-between p-3 border border-x-transparent border-t-transparent border-b-[#31302f] lg:w-[70%]'>
                                     <div className=' flex items-center'>
                                         <img className={category === 'hombres' ? 'w-14 ml-3 mr-7 lg:w-20 lg:ml-7 lg:mr-9' : 'w-24 lg:w-36'} src={image} alt={name} />
                                         <div>
