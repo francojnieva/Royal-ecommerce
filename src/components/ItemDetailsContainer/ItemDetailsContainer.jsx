@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import getProductsById from '../../utils/getProductsById.js'
 import { useParams } from 'react-router-dom'
 import ItemDetails from '../../pages/ItemDetails/ItemDetails.jsx'
+import { doc, getDoc } from "firebase/firestore";
+import { db } from '../../services/firebaseConfig.js';
 
 const ItemDetailsContainer = () => {
 
@@ -12,10 +14,18 @@ const ItemDetailsContainer = () => {
     const [skeleton, setSkeleton] = useState(true)
 
     useEffect(() => {
-        getProductsById(id).then(res => setProducts(res))
-            .finally(() => {
-                setSkeleton(false)
-            })
+        
+        const productsRef = doc(db, "products", id)
+        getDoc(productsRef)
+        .then(snapshot => {
+            const data = snapshot.data()
+            const productFormatted = { id: snapshot.id, ...data }
+            setProducts(productFormatted)
+        })
+        .catch(error => console.log(error))
+        .finally(() => {
+            setSkeleton(false)
+        })
     }, [id])
 
     return (

@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import getProductsByCategory from '../../utils/getProductsByCategory.js'
 import Button from '../../components/Button/Button.jsx'
+import { collection, query, where, getDocs } from "firebase/firestore";
+import { db } from '../../services/firebaseConfig.js';
+
 
 const ItemList = () => {
 
@@ -11,11 +14,22 @@ const ItemList = () => {
     const { category } = useParams()
 
     useEffect(() => {
-        getProductsByCategory(category).then(res => {
-            setProducts(res)
-        }).finally(() => {
+
+        const productsRef = category && query(collection(db, "products"), where("category", "==", category))
+
+        getDocs(productsRef)
+        .then(snapshot => {
+            const productsFormatted = snapshot.docs.map(doc => {
+                const data = doc.data()
+                return { id: doc.id, ...data}
+            })
+            setProducts(productsFormatted)
+        })
+        .catch(error => console.log(error))
+        .finally(() => {
             setLoading(false)
         })
+
     }, [category])
 
     return (
