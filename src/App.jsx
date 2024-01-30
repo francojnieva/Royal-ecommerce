@@ -8,6 +8,7 @@ import ItemDetailsContainer from './components/ItemDetailsContainer/ItemDetailsC
 import NotFound from './pages/NotFound/NotFound'
 import { CartContextProvider } from './context/CartContext'
 import Cart from './pages/Cart/Cart'
+import AboutUs from './pages/AboutUs/AboutUs'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
 				<Route path="producto/:id" element={<ItemDetailsContainer/>}/>
 				<Route path="/cart" element={<Cart />}/>
 				<Route path="*" element={<NotFound />}/>
+				<Route path="/about-us" element={<AboutUs />}/>
 			</Routes>
 			<Footer></Footer>
 		</CartContextProvider>

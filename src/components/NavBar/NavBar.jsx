@@ -22,6 +22,7 @@ const NavBar = () => {
 						<li><Link to='category/hombres' className='hover:text-[#ecbb8f] transition-all'>HOMBRES</Link></li>
 						<li><Link to='category/mujeres' className='hover:text-[#ecbb8f] transition-all'>MUJERES</Link></li>
 						<li><Link to='category/vintage' className='hover:text-[#ecbb8f] transition-all'>VINTAGE</Link></li>
+						<li><Link to='about-us' className='hover:text-[#ecbb8f] transition-all'>NOSOTROS</Link></li>
 						<li><Link to='contact' className='hover:text-[#ecbb8f] transition-all'>CONTACTO</Link></li>
 					</ul>
 				</div>
