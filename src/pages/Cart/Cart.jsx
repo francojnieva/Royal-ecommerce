@@ -42,10 +42,10 @@ const Cart = () => {
                         </div>
                         <div className='py-6 w-full flex justify-between items-center text-sm lg:w-[70%]'>
                             <button className='bg-red-600 rounded-md p-2' onClick={emptyCart}>Vaciar carrito</button>
-                            <button className='text-[#ecbb8f] flex space-x-3 border rounded-md p-2 '>
+                            <Link to='/checkout' className='text-[#ecbb8f] flex space-x-3 border rounded-md p-2 '>
                                 <span>COMPRAR</span>
                                 <IoIosArrowDroprightCircle className='text-lg' />
-                            </button>
+                            </Link>
                         </div>
                     </>
             }

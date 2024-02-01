@@ -4,6 +4,7 @@ import { RiSubtractFill } from "react-icons/ri";
 import { CartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import Button from '../../components/Button/Button';
+import ItemCount from '../../components/ItemCount/ItemCount'
 
 const ItemDetails = ({ products, skeleton }) => {
 
@@ -65,11 +66,20 @@ const ItemDetails = ({ products, skeleton }) => {
                                         <>
                                             <p className='text-[#ecbb8f]'>Cantidad:</p>
                                             <div className='flex items-center space-x-4 pb-3'>
-                                                <button onClick={subtract} className='py-1 px-3 rounded-md text-white bg-[#444444]' disabled={counter === 1} ><RiSubtractFill /></button>
+                                                <ItemCount callback={subtract} disabled={counter === 1} >
+                                                    <RiSubtractFill />
+                                                </ItemCount>
                                                 <p>{counter}</p>
-                                                <button onClick={add} className=' py-1 px-3 rounded-md text-white bg-[#444444]' disabled={counter >= stock}><IoMdAdd /></button>
+                                                <ItemCount callback={add} disabled={counter >= stock}>
+                                                    <IoMdAdd />
+                                                </ItemCount>
                                             </div>
-                                            <Button callback={handleaddToCart} label={'Agregar al carrito'}></Button>
+                                            {stock === 0 && 
+                                            <>
+                                                <p className='text-white bg-red-600 p-2 text-center rounded-md'>Sin Stock</p>
+                                            </>
+                                            }  
+                                            <Button callback={handleaddToCart} label={'Agregar al carrito'} disabled={stock === 0}></Button>
                                         </>
                                 }
                             </div>

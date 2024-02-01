@@ -6,7 +6,7 @@ const AboutUs = () => {
     const backgroundImage = `url(${img1})`
 
     return (
-        <section className='pt-14 text-[#d3d3d3] lg:text-lg'>
+        <section className='pt-14 text-[#fff] lg:text-lg'>
             <div style={{ backgroundImage }} className='w-full bg-cover bg-center h-40 lg:h-56 xl:h-64'></div>
             <div className=' bg-[#bb6a27b9] h-32 md:w-[85%]'></div>
             <p className='-mt-20 ml-3 w-[80%] bg-[#0f0f0f] px-3 py-6  md:w-[70%]'><span className='text-[#ecbb8f] text-3xl lg:text-4xl'>E</span>n Royal, nos apasiona la fusión perfecta entre estilo y funcionalidad. Somos una tienda online dedicada a ofrecer una cuidada selección de relojes para hombres, mujeres y auténticos tesoros vintage. Creemos que un reloj no solo marca las horas, sino que también cuenta una historia de estilo y sofisticación.</p>

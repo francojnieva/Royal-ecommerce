@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound/NotFound'
 import { CartContextProvider } from './context/CartContext'
 import Cart from './pages/Cart/Cart'
 import AboutUs from './pages/AboutUs/AboutUs'
+import Checkout from './pages/Checkout/Checkout'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 				<Route path="/cart" element={<Cart />}/>
 				<Route path="*" element={<NotFound />}/>
 				<Route path="/about-us" element={<AboutUs />}/>
+				<Route path="/checkout" element={<Checkout />}/>
 			</Routes>
 			<Footer></Footer>
 		</CartContextProvider>

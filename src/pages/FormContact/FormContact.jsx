@@ -19,11 +19,11 @@ const FormContact = () => {
 	}
 
 	return (
-		<section className=' px-3 py-20 flex justify-center'>
+		<section className=' px-3 py-20 text-[#fff] flex justify-center'>
 			<div className=' hidden lg:block'>
 				<img src={banner} alt="reloj en tonos dorados con negro" className=' w-64 h-[38rem] object-cover' />
 			</div>
-			<form method='post' className=' w-[95%] text-[#d3d3d3] md:w-[70%] lg:w-[40%]' onSubmit={handleSubmit(onSubmit)}>
+			<form method='post' className=' w-[95%]  md:w-[70%] lg:w-[40%]' onSubmit={handleSubmit(onSubmit)}>
 				<h2 className=' text-3xl text-center pb-3 text-[#ecbb8f]'>Contacto</h2>
 				<div className='flex flex-col space-y-2 mb-6  lg:pl-4'>
 					<label htmlFor="name">Nombre:</label>
