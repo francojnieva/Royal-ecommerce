@@ -10,9 +10,9 @@ const MenuMobile = (props) => {
 
 
 	return (
-		<section className={`p-4 fixed top-0 bg-[#5a3b17] w-52 h-full z-50 lg:hidden ${showMenu ? 'left-0' : '-left-full'} transition-all md:w-72`}>
+		<section className={`p-4 fixed top-0 bg-[#141414] w-52 h-full z-50 lg:hidden ${showMenu ? 'left-0' : '-left-full'} transition-all md:w-72`}>
 			<nav>
-				<ul className='mt-3 space-y-7 font-bold text-md text-[#faf3ee]'>
+				<ul className='mt-3 space-y-7 font-bold text-md text-[#BD926C]'>
 					<li><Link to='/' onClick={handleLinkClick}>INICIO</Link></li>
 					<li><Link to='category/hombres' onClick={handleLinkClick}>HOMBRES</Link></li>
 					<li><Link to='category/mujeres' onClick={handleLinkClick}>MUJERES</Link></li>
