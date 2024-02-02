@@ -50,11 +50,11 @@ const Checkout = () => {
     if (shoppingId) {
         return (
             <div className='text-[#fff] flex flex-col justify-center items-center space-y-4 h-screen'>
-                <div className='flex flex-col items-center space-y-4 text-center'>
+                <div className='py-10 px-5 bg-[#111111] rounded-md flex flex-col items-center space-y-4 text-center border border-[#ecbb8f]'>
                     <IoBagCheckSharp className='text-6xl text-[#4eda49]' />
                     <p className='text-xl lg:text-2xl'><span className='text-[#ecbb8f] text-2xl lg:text-3xl'>{userName}</span><br />¡Muchas gracias por tu compra!</p>
                     <p className='text-base'>Tu orden se generó correctamente</p>
-                    <p className=' bg-[#222222c7] py-1 px-3 rounded-md'>{shoppingId}</p>
+                    <p className=' bg-[#4b4b4bf3] py-1 px-3 rounded-md'>{shoppingId}</p>
                     <small className='text-[#ecbb8f] text-sm'>Asegúrate se guardar el ID del producto</small>
                 </div>
                 <Link to='/'><Button label='Ir al inicio' /></Link>

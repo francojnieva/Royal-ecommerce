@@ -12,12 +12,12 @@
 
 - **Firebase:** Una plataforma completa proporcionada por Google para el desarrollo de aplicaciones web y móviles, con Firestore como la base de datos NoSQL.
 
-## Características
+## Características Principales
 - **Productos:** Explore una colección diversa de relojes para hombres, mujeres y entusiastas de lo vintage.
 
 - **Diseño Responsivo:** Disfrute de una experiencia de compra fluida en varios dispositivos, incluidos teléfonos móviles, tabletas y computadoras portátiles.
 
-- **Integración con Firebase:** Los datos de los productos se almacenan y recuperan de Firebase Firestore, asegurando actualizaciones en tiempo real y una gestión eficiente de datos. Además, los productos comprados también se almacenan en Firestore.
+- **Integración con Firebase:** Los datos de los productos se almacenan y recuperan de Firebase Firestore, asegurando actualizaciones en tiempo real y una gestión eficiente de datos. Los productos comprados también se almacenan en Firestore y los datos que el usuario deja en el formulario de contacto.
 
 - **LocalStorage:** Los productos agregados al carrito se almacenan en el Local Storage del navegador para preservar la información incluso después de cerrar la ventana del navegador.
 
