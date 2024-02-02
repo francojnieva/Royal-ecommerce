@@ -14,16 +14,17 @@ const NavBar = () => {
 
 	return (
 		<header>
-			<nav className='bg-[#141414] text-[#BD926C] flex justify-between items-center fixed top-0 w-full p-3 md:px-7 lg:px-12 z-40'>
+			<nav className='bg-[#141414] text-[#BD926C] flex justify-between items-center fixed top-0 w-full p-3 md:px-7 lg:px-9 z-40'>
 				<Link to='/' className='text-3xl font-bold tracking-wide'>Royal</Link>
 				<div className='hidden lg:block'>
-					<ul className=' flex items-center space-x-8 font-bold'>
+					<ul className=' flex items-center space-x-8 font-bold lg:text-sm xl:text-base'>
 						<li><Link to='/' className='hover:text-[#ecbb8f] transition-all'>INICIO</Link></li>
 						<li><Link to='category/hombres' className='hover:text-[#ecbb8f] transition-all'>HOMBRES</Link></li>
 						<li><Link to='category/mujeres' className='hover:text-[#ecbb8f] transition-all'>MUJERES</Link></li>
 						<li><Link to='category/vintage' className='hover:text-[#ecbb8f] transition-all'>VINTAGE</Link></li>
 						<li><Link to='about-us' className='hover:text-[#ecbb8f] transition-all'>NOSOTROS</Link></li>
 						<li><Link to='contact' className='hover:text-[#ecbb8f] transition-all'>CONTACTO</Link></li>
+						<li><Link to='record' className='hover:text-[#ecbb8f] transition-all'>TUS COMPRAS</Link></li>
 					</ul>
 				</div>
 				<div className='flex items-center space-x-4'>

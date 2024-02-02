@@ -17,7 +17,7 @@
 
 - **Diseño Responsivo:** Disfrute de una experiencia de compra fluida en varios dispositivos, incluidos teléfonos móviles, tabletas y computadoras portátiles.
 
-- **Integración con Firebase:** Los datos de los productos se almacenan y recuperan de Firebase Firestore, asegurando actualizaciones en tiempo real y una gestión eficiente de datos. Los productos comprados también se almacenan en Firestore y los datos que el usuario deja en el formulario de contacto.
+- **Firebase:** Los productos exhibidos en las distintas categorías se almacenan y renderizan desde Firebase Firestore. Los productos adquiridos también se registran y se muestran en una vista aparte, permitiendo a los usuarios revisar su historial de compras. Además, los datos proporcionados por el usuario en el formulario de contacto se almacenan en la base de datos. Esta integración garantiza la actualización en tiempo real, una gestión eficiente de datos y una experiencia fluida para el usuario.
 
 - **LocalStorage:** Los productos agregados al carrito se almacenan en el Local Storage del navegador para preservar la información incluso después de cerrar la ventana del navegador.
 

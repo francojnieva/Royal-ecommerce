@@ -15,6 +15,7 @@ const Footer = () => {
 				<Link to='category/vintage' className='hover:underline transition-all'>Vintage</Link>
 				<Link to='about-us' className='hover:underline transition-all'>Nosotros</Link>
 				<Link to='contact' className='hover:underline transition-all'>Contacto</Link>
+				<Link to='record' className='hover:underline transition-all'>Tus compras</Link>
 			</div>
 			<div className='flex flex-col space-y-6'>
 				<h4 className=' text-[#6C727C] font-bold'>SOCIAL</h4>
