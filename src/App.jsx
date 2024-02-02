@@ -10,6 +10,7 @@ import { CartContextProvider } from './context/CartContext'
 import Cart from './pages/Cart/Cart'
 import AboutUs from './pages/AboutUs/AboutUs'
 import Checkout from './pages/Checkout/Checkout'
+import ShoppingHistory from './pages/ShoppingHistory/ShoppingHistory'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
 				<Route path="*" element={<NotFound />}/>
 				<Route path="/about-us" element={<AboutUs />}/>
 				<Route path="/checkout" element={<Checkout />}/>
+				<Route path="/record" element={<ShoppingHistory />}/>
 			</Routes>
 			<Footer></Footer>
 		</CartContextProvider>

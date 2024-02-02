@@ -19,6 +19,7 @@ const MenuMobile = (props) => {
 					<li><Link to='category/vintage' onClick={handleLinkClick}>VINTAGE</Link></li>
 					<li><Link to='/about-us' onClick={handleLinkClick}>NOSOTROS</Link></li>
 					<li><Link to='/contact' onClick={handleLinkClick}>CONTACTO</Link></li>
+					<li><Link to='/record' onClick={handleLinkClick}>TUS COMPRAS</Link></li>
 				</ul>
 			</nav>
 		</section>

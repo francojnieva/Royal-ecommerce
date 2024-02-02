@@ -1,13 +1,17 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import banner from '../FormContact/assets/banner-form-contact.jpg'
+import { addDoc, collection } from 'firebase/firestore'
+import { db } from '../../services/firebaseConfig'
 
 const FormContact = () => {
 
-	const { handleSubmit, control, register, formState: { errors } } = useForm()
+	const { handleSubmit, register, formState: { errors }, reset } = useForm()
 
 	const [showThankYouMessage, setShowThankYouMessage] = useState(false)
 	const [submittedName, setSubmittedName] = useState('')
+
+	const contactRerefence = collection(db, 'contact')
 
 	const onSubmit = (data) => {
 		setShowThankYouMessage(true)
@@ -16,6 +20,14 @@ const FormContact = () => {
 		setTimeout(() => {
 			setShowThankYouMessage(false)
 		}, 3000)
+
+		const contact = {
+            data,
+            date: new Date()
+        }
+
+		addDoc(contactRerefence, contact)
+        reset()
 	}
 
 	return (
@@ -96,11 +108,11 @@ const FormContact = () => {
 					<span className='text-xs text-red-600 pb-3 xl:text-sm'>{errors.message && errors.message.message}</span>
 				</div>
 				{showThankYouMessage && (
-					<div className="bg-[#218526] text-[#fff] text-sm p-2 rounded-md text-center mb-4">
+					<div className="bg-[#218526] text-[#fff] p-2 rounded-md text-center mb-4">
 						<p>¡Gracias {submittedName} por contactarnos!</p>
 					</div>
 				)}
-				<button type="submit" className='bg-[#222222] text-[#FFF] text-sm  py-2 px-4 rounded-md lg:ml-4'>Enviar</button>
+				<button type="submit" className='bg-[#222222] text-[#FFF] py-2 px-4 rounded-md lg:ml-4'>Enviar</button>
 			</form>
 		</section>
 	)
