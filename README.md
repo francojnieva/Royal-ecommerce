@@ -4,13 +4,18 @@
  [![royal-banner.png](https://i.postimg.cc/XvbxCTWg/royal-banner.png)](https://postimg.cc/ZWwrksC9)
  
 ##  Tecnologías Utilizadas
-- **ReactJS:** Una biblioteca de JavaScript para construir interfaces de usuario.
+![Static Badge](https://img.shields.io/badge/ReactJS-61DAFB?style=for-the-badge&logo=react&logoColor=%23ffff) 
+![Static Badge](https://img.shields.io/badge/ViteJS-646CFF?style=for-the-badge&logo=vite&logoColor=%23ffff) 
+![Static Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwind%20css&logoColor=%23ffff)
+![Static Badge](https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=%23ffff)
+![Static Badge](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=%23ffff)
+![Static Badge](https://img.shields.io/badge/react%20icons-CA4245?style=for-the-badge&logo=react%20icon&logoColor=%23ffff)
+![Static Badge](https://img.shields.io/badge/react%20hook%20form-EC5990?style=for-the-badge&logo=react%20hook%20form&logoColor=%23ffff)
+![Static Badge](https://img.shields.io/badge/react%20router-CA4245?style=for-the-badge&logo=react%20router&logoColor=%23ffff)
+![Static Badge](https://img.shields.io/badge/daisyui-5A0EF8?style=for-the-badge&logo=daisyui&logoColor=%23ffff)
 
-- **ViteJS:** Una herramienta de construcción frontend rápida que proporciona una experiencia de desarrollo ágil.
 
-- **Tailwind CSS**: Un framework CSS utilizado para el estilo, asegurando un diseño receptivo y visualmente atractivo.
 
-- **Firebase:** Una plataforma completa proporcionada por Google para el desarrollo de aplicaciones web y móviles, con Firestore como la base de datos NoSQL.
 
 ## Características Principales
 - **Productos:** Explore una colección diversa de relojes para hombres, mujeres y entusiastas de lo vintage.
